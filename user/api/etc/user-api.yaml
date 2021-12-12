@@ -1,0 +1,14 @@
+Name: user-api
+Host: 0.0.0.0
+Port: 8888
+
+Mysql:
+  DataSource: root:bzz@1234@tcp(localhost:3306)/go_zero
+# redis 作为换存储
+CacheRedis:
+  - Host: localhost:6379
+    Pass:
+    Type: node
+Auth:
+  AccessSecret: ad879037-c7a4-4063-9236-6bfc35d54b7d
+  AccessExpire: 86400

@@ -1,0 +1,34 @@
+syntax = "v1"
+
+info(
+	title: "user service"
+	desc: "provide login function as restful"
+	author: "brickzzhang"
+	email: "coderlook@163.com"
+)
+
+type loginRequest {
+	Name     string `json:"name"`
+	Password string `json:"password"`
+}
+
+type loginResponse {
+	Token string `json:"token"`
+}
+
+type registerRequest {
+	Name     string `json:"name"`
+	Password string `json:"password"`
+}
+
+type registerResponse {
+	ID int `json:"id"`
+}
+
+service user-api {
+	@handler Register
+	post /users/register(registerRequest) returns(registerResponse)
+	
+	@handler Login
+	post /users(loginRequest) returns(loginResponse)
+}

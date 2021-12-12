@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package user;
+
+message GetUserPasswordRequest {
+    string name = 1;
+}
+
+message GetUserPasswordResponse {
+    string password = 1;
+}
+
+service User {
+    rpc GetUserPassword(GetUserPasswordRequest)
+        returns (GetUserPasswordResponse);
+}
