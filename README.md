@@ -17,3 +17,7 @@ User rpc service implements query password function.
 The project is the basic use of go-zero framework. More advanced usage such as rate limit will be added later.
 
 ## Reference
+
+[go-zero official document](https://go-zero.dev/cn/api-coding.html)
+
+[go-zero实战之blog系统](https://mp.weixin.qq.com/s/XCm5xTx6dLR3uJFKEFx6Mw)
