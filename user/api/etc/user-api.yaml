@@ -2,6 +2,12 @@ Name: user-api
 Host: 0.0.0.0
 Port: 8888
 
+# 监控
+Prometheus:
+  Host: 0.0.0.0
+  Port: 9092
+  Path: /metrics
+
 Mysql:
   DataSource: root:bzz@1234@tcp(localhost:3306)/go_zero
 # redis 作为换存储
