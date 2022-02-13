@@ -7,6 +7,13 @@ Prometheus:
   Port: 9093
   Path: /metrics
 
+#链路追踪
+Telemetry:
+  Name: user-rpc
+  Endpoint: http://localhost:14268/api/traces
+  Sampler: 1.0
+  Batcher: jaeger
+
 Etcd:
   Hosts:
     - 127.0.0.1:2379
@@ -17,3 +24,4 @@ Table: user
 # redis 作为换存储
 Cache:
   - Host: localhost:6379
+    Pass: bzz@1234

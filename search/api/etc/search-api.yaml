@@ -8,6 +8,13 @@ Prometheus:
   Port: 9091
   Path: /metrics
 
+#链路追踪
+Telemetry:
+  Name: search-api
+  Endpoint: http://localhost:14268/api/traces
+  Sampler: 1.0
+  Batcher: jaeger
+
 User:
   Etcd:
     #  Hosts 是 user.rpc 服务在 etcd 中的 value 值

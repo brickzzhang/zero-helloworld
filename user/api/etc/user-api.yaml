@@ -8,12 +8,19 @@ Prometheus:
   Port: 9092
   Path: /metrics
 
+#链路追踪
+Telemetry:
+  Name: user-api
+  Endpoint: http://localhost:14268/api/traces
+  Sampler: 1.0
+  Batcher: jaeger
+
 Mysql:
   DataSource: root:bzz@1234@tcp(localhost:3306)/go_zero
 # redis 作为换存储
 CacheRedis:
   - Host: localhost:6379
-    Pass:
+    Pass: bzz@1234
     Type: node
 Auth:
   AccessSecret: ad879037-c7a4-4063-9236-6bfc35d54b7d
